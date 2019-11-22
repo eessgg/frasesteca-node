@@ -7,7 +7,7 @@ const session = require('express-session')
 const path = require('path')
 const passport = require('passport')
 const app = express()
-require('dotenv').config();
+require('dotenv').config()
 
 
 // ---- load routes ----
@@ -70,8 +70,8 @@ app.use('/quotes', quotes)
 
 
 
-const port = process.env.PORT || 3333
+const PORT = process.env.PORT || 3333
 // listen port 3333
-app.listen(port, function() {
-  console.log(`Server started on port ${port}`)
+app.listen(PORT, function() {
+  console.log(`Server started on port ${PORT}`)
 })
