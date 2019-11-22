@@ -1,5 +1,4 @@
 const express = require('express')
-
 const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
@@ -8,21 +7,27 @@ const session = require('express-session')
 const path = require('path')
 const passport = require('passport')
 const app = express()
+require('dotenv').config();
+
 
 // ---- load routes ----
 const quotes = require('./routes/quotes')
 const users = require('./routes/users')
 const index = require('./routes/index')
 
-// Passpport Config
-require('./config/passport')(passport)
-// DB config
-const db = require('./config/database')
+// Passport Config
+require('./config/passport')(passport);
+// DB Config
+const db = require('./config/database');
 
 // ---- DATABASE ----
-mongoose.connect(db.mongoURI,
-{ useNewUrlParser: true, useUnifiedTopology: true }
-).then(() => console.log('MongoDB Connected...')).catch(err => console.log(err))
+mongoose.Promise = global.Promise;
+
+mongoose.connect(db.mongoURI, 
+  { useNewUrlParser: true, useUnifiedTopology: true }
+)
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
 
 // // Load Quote Model
 // require('./models/Quotes')
