@@ -1,0 +1,27 @@
+<div class="columns is-multiline">
+  <% if (locals.quotes) { %>
+  <% for(var i = 0; i < quotes.length; i++) { %>
+  <div class="column is-one-quarter-desktop is-half-tablet">
+    <div class="card">
+      <div class="card-content">
+        <p class="is-size-5 has-text-weight-bold">
+          "<%= quotes[i].sentence %>"
+        </p>
+        <p class="subtitle has-text-grey">
+          - <%= quotes[i].author %> -
+        </p>
+      </div>
+      <footer class="card-footer">
+        <a href="/quotes/edit/<%= quotes[i]._id %>" class="card-footer-item">
+          EDIT <i class="fas fa-edit"></i>
+        </a>
+        <form method="POST" action="/quotes/<%= quotes[i].id %>?_method=DELETE" class="deleteform">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="card-footer-item "><i class="fas fa-times "></i></button>
+        </form>
+      </footer>
+    </div>
+  </div>
+  <% } %>
+  <% } %>
+</div>

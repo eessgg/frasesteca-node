@@ -1,0 +1,38 @@
+<figure class="login-icon">
+  <img src="https://banner2.cleanpng.com/20180331/fcq/kisspng-login-computer-icons-login-button-5ac038a51b8058.5627713915225468531127.jpg" alt="login icon">
+</figure>
+<h1 class="title"> Faça o Login</h1>
+
+<form action="/users/login" method="POST">
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="email" placeholder="Email input" name="email">
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Password</label>
+    <p class="control has-icons-left">
+      <input class="input" type="password" placeholder="Password" name="password">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-link">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-link is-light">Cancel</button>
+    </div>
+  </div>
+</form>
