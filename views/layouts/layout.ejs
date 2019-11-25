@@ -11,17 +11,20 @@
 </head>
 
 <body>
-  <% include ../partials/_header %>
-  <% include ../partials/_hero %>
+  <div class="wrapper">
+    <% include ../partials/_header %>
+    
 
-  <section class="section">
-    <div class="container">
-      <% include ../partials/_msg %>
-      <%- body %>
-    </div>
-  </section>
+    <section class="section">
+      <div class="container">
+        
+        <%- body %>
+      </div>
+    </section>
+  
+    <% include ../partials/_footer %>
 
-  <% include ../partials/_footer %>
+  </div>
 </body>
 
 </html>

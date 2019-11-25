@@ -23,7 +23,7 @@ const db = require('./config/database');
 // ---- DATABASE ----
 mongoose.Promise = global.Promise;
 
-mongoose.connect(db.mongoURI, 
+mongoose.connect(process.env.mongoURI,
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
   .then(() => console.log('MongoDB Connected...'))
@@ -70,7 +70,7 @@ app.use('/quotes', quotes)
 
 
 
-const PORT = process.env.PORT || 3333
+const PORT = process.env.PORT || 3000
 // listen port 3333
 app.listen(PORT, function() {
   console.log(`Server started on port ${PORT}`)

@@ -1,34 +1,11 @@
-  <!-- <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/" id="logo"> FrasesTeca &#x1F424;</a>
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/"> Home </a>
-            <a class="navbar-item" href="/quotes"> Minhas Frases! </a>
-            <a class="navbar-item" href="/quotes/add"> Add Quote </a>
-            <a class="navbar-item" href="/users/login"> Login </a>
-            <a class="navbar-item" href="/users/register"> Register </a>
-            <a class="navbar-item" href="/about"> About </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header> -->
 
   <header>
     <div class="container">
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="/" id="logo"> FrasesTeca &#x1F424;</a>
+          <a class="navbar-item" href="/" id="logo">
+            <img src="/img/frasesteca.png" alt="">
+          </a>
 
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -53,8 +30,8 @@
                   <a href="#">Already Logged </a>
                   <a class="button is-primary" href="/users/logout"> <strong> Logout</strong> </a>
                 <% } else { %>
-                  <a class="button is-primary" href="/users/login"> <strong> Login</strong> </a>
-                  <a class="button is-light" href="/users/register"> Register </a>
+                  <a class="button is-brown-md" href="/users/login"> <strong> Login</strong> </a>
+                  <a class="button is-brown-lt" href="/users/register"> Register </a>
                 <% } %>
               </div>
             </div>
